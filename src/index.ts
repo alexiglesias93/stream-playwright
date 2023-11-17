@@ -20,3 +20,5 @@ export const calculateBMI = (kg: number, cm: number) => {
 
   return divideNumbers(kg, squareMeters);
 };
+
+export const newFeature = () => false;

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { addNumbers, calculateBMI } from '../src';
+import { addNumbers, calculateBMI, newFeature } from '../src';
 
 test('addNumbers adds numbers correctly', () => {
   const result = addNumbers(2, 5);
@@ -58,4 +58,10 @@ test('jQuery works fine', async ({ page }) => {
   // Check if the class was added to the input
 
   await expect(weightInput).toHaveClass(/test/);
+});
+
+test('New feature is working fine', () => {
+  const result = newFeature();
+
+  expect(result).toBe(true);
 });
